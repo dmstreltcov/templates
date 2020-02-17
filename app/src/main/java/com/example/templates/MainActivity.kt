@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+// comment
         pref = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
         txtCounter = findViewById(R.id.counter)
         btn = findViewById(R.id.btn)
