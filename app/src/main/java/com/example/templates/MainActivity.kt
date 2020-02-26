@@ -4,8 +4,12 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import io.reactivex.Observable
+import io.reactivex.Scheduler
+import io.reactivex.schedulers.Schedulers
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-// comment
         pref = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
         txtCounter = findViewById(R.id.counter)
         btn = findViewById(R.id.btn)
@@ -30,7 +33,29 @@ class MainActivity : AppCompatActivity() {
             txtCounter.text = counter.toString()
         }
 
+        val observ = Observable.just(1,2,3,4,5)
+
+        val disposable = observ.subscribeOn(Schedulers.io()).subscribe {
+            Thread.sleep(1000)
+            Log.d("WHAT THE FUCK", it.toString())
+        }
+
+
+
+//            .doOnNext {
+//            Log.d("WHAT THE FUCK", it.toString())
+//        }.subscribe()
+
+
+
     }
+
+    fun something(){
+        val obs = Observable.just(null)
+    }
+
+
+
 
     override fun onResume() {
         super.onResume()
