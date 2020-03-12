@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentSplashScreen">
+    <fragment
+        android:id="@+id/fragmentSplashScreen"
+        android:name="com.example.templates.FragmentSplashScreen"
+        android:label="FragmentSplashScreen" />
+    <fragment
+        android:id="@+id/fragmentNews"
+        android:name="com.example.templates.FragmentNews"
+        android:label="FragmentNews" />
+    <fragment
+        android:id="@+id/fragmentWeather"
+        android:name="com.example.templates.FragmentWeather"
+        android:label="FragmentWeather" />
+    <fragment
+        android:id="@+id/fragmentCalendar"
+        android:name="com.example.templates.FragmentCalendar"
+        android:label="FragmentCalendar" />
+    <fragment
+        android:id="@+id/fragmentExchange"
+        android:name="com.example.templates.FragmentExchange"
+        android:label="FragmentExchange" />
+</navigation>

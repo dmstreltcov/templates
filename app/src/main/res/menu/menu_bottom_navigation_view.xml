@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_news_24dp"
+        android:title="@string/title_menu_news" />
+    <item
+        android:id="@+id/weather"
+        android:icon="@drawable/ic_weather_24dp"
+        android:title="@string/title_menu_weather" />
+    <item
+        android:id="@+id/exchange_rates"
+        android:icon="@drawable/ic_exchange_24dp"
+        android:title="@string/title_menu_exchange_rates" />
+    <item
+        android:id="@+id/calendar"
+        android:icon="@drawable/ic_calendar_24dp"
+        android:title="@string/title_menu_calendar" />
+</menu>

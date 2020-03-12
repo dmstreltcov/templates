@@ -1,26 +1,23 @@
 package com.example.templates
 
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.NavHost
+import androidx.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        navController = Navigation.findNavController(this,R.id.nav_host_fragment );
+        navController.navigate(R.id.fragmentSplashScreen)
         //MainActivity is container for another fragments
-
         //BottomNavigationMenu
-
         //NavigationDrawer
-
-        //Android ViewModel
-        //Android Kotlin Coroutines
-        //Android LiveData
 
 
     }
